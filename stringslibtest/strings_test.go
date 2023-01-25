@@ -1,4 +1,4 @@
-package stringslibtest
+package strings
 
 import (
 	StringsPackage "github.com/Eclalang/strings"
