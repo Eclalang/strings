@@ -3,6 +3,7 @@ package strings
 import (
 	StringsPackage "github.com/Eclalang/strings"
 	"reflect"
+	"strconv"
 	"strings"
 	"testing"
 )
@@ -40,10 +41,10 @@ func TestCount(t *testing.T) {
 func TestCut(t *testing.T) {
 	str := "Hello i am a bear"
 	substr := "a "
-	expected_before, expected_after, expected_found := strings.Cut(str, substr)
-	actual_before, actual_after, actual_found := StringsPackage.Cut(str, substr)
-	if actual_before != expected_before && actual_after != expected_after && actual_found != expected_found {
-		t.Errorf("StringsPackage.Cut(\"%s\", \"%s\") returned %s, %s, %t, expected %s, %s, %t", str, substr, actual_before, actual_after, actual_found, expected_before, expected_after, expected_found)
+	expectedBefore, expectedAfter, expectedFound := strings.Cut(str, substr)
+	actual := StringsPackage.Cut(str, substr)
+	if actual[0] != expectedBefore && actual[1] != expectedAfter && actual[2] != strconv.FormatBool(expectedFound) {
+		t.Errorf("StringsPackage.Cut(\"%s\", \"%s\") returned %s, expected %s", str, substr, actual, [3]string{expectedBefore, expectedAfter, strconv.FormatBool(expectedFound)})
 	}
 }
 
