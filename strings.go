@@ -1,7 +1,6 @@
 package strings
 
 import (
-	"strconv"
 	"strings"
 )
 
@@ -21,9 +20,8 @@ func Count(str string, substr string) int {
 }
 
 // Cut returns the strings before and after the substring, and a boolean indicating if the substring was found
-func Cut(str string, substr string) [3]string {
-	before, after, found := strings.Cut(str, substr)
-	return [3]string{before, after, strconv.FormatBool(found)}
+func Cut(str string, substr string) (string, string, bool) {
+	return strings.Cut(str, substr)
 }
 
 // HasPrefix returns true if the string starts with the prefix
