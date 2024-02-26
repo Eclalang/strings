@@ -1,5 +1,8 @@
 # Strings library
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/Eclalang/strings)](https://goreportcard.com/report/github.com/Eclalang/strings)
+[![codecov](https://codecov.io/gh/Eclalang/strings/graph/badge.svg?token=YNCIYERVBO)](https://codecov.io/gh/Eclalang/strings)
+
 ## Candidate functions :
 
 |  Func Name  |                               Prototype                                |                                                                                  Description                                                                                  | Comments |
